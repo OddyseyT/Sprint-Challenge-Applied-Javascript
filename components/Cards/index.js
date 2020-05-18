@@ -73,16 +73,18 @@ authorImg.src = item.authorPhoto
 authName.textContent = `By: ${item.authorName}`
 
 cardDiv.appendChild(headDiv)
-headDiv.appendChild(authorDiv)
-headDiv.appendChild(imgBox)
-headDiv.appendChild(authName)
+cardDiv.appendChild(authorDiv)
+authorDiv.appendChild(imgBox)
 imgBox.appendChild(authorImg)
+authorDiv.appendChild(authName)
+
 
 cardDiv.classList.add('card')
-headDiv.classList.add('card','headline')
-authorDiv.classList.add ('card', 'author')
-imgBox.classList.add('card', 'author','img-container')
-authName.classList.add('card', 'author', 'span')
+headDiv.classList.add('headline')
+imgBox.classList.add('img-container')
+authorImg.classList.add('img')
+authorDiv.classList.add ('author')
+authName.classList.add('span')
 
 
 return cardDiv
